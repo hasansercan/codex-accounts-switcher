@@ -1,0 +1,28 @@
+name: Bug report / Hata bildirimi
+description: Report a reproducible issue without sharing credentials.
+body:
+  - type: markdown
+    attributes:
+      value: "Never attach auth.json, login URLs, passwords, 2FA secrets or account exports."
+  - type: input
+    id: version
+    attributes:
+      label: App version / Uygulama sürümü
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version and CPU architecture
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps, expected result and actual result
+    validations:
+      required: true
+  - type: textarea
+    id: sanitized
+    attributes:
+      label: Sanitized error message / Kişisel bilgiler temizlenmiş hata

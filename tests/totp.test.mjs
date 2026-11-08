@@ -1,0 +1,8 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {totp,parseSecret} from '../src/totp.mjs';
+function base32(input){let a=0,b=0,out='';for(const c of Buffer.from(input)){a=(a<<8)|c;b+=8;while(b>=5){b-=5;out+='ABCDEFGHIJKLMNOPQRSTUVWXYZ234567'[(a>>>b)&31];a&=(1<<b)-1;}}if(b)out+='ABCDEFGHIJKLMNOPQRSTUVWXYZ234567'[(a<<(5-b))&31];return out;}
+const vectors=[[59,'94287082','46119246','90693936'],[1111111109,'07081804','68084774','25091201'],[1111111111,'14050471','67062674','99943326'],[1234567890,'89005924','91819424','93441116'],[2000000000,'69279037','90698825','38618901'],[20000000000,'65353130','77737706','47863826']];
+for(const [index,[alg,key]] of [['SHA1','12345678901234567890'],['SHA256','12345678901234567890123456789012'],['SHA512','1234567890123456789012345678901234567890123456789012345678901234']].entries())test(`RFC 6238: ${alg} six time vectors`,()=>{for(const [time,...expected] of vectors)assert.equal(totp(`otpauth://totp/test?secret=${base32(key)}&algorithm=${alg}&digits=8`,time).code,expected[index]);});
+test('6-digit default and 30-second rollover',()=>{const v=base32('12345678901234567890');assert.equal(totp(v,59).code,'287082');assert.equal(totp(v,59).remaining,1);assert.equal(totp(v,60).remaining,30);});
+test('reject recovery codes, malformed URLs and unsupported parameters',()=>{for(const input of ['123456','otpauth://hotp/test?secret=JBSWY3DPEHPK3PXP','otpauth://totp/test?secret=JBSWY3DPEHPK3PXP&period=0','otpauth://totp/test?secret=JBSWY3DPEHPK3PXP&algorithm=MD5','otpauth://totp/test?secret=JBSWY3DPEHPK3PXP&digits=9','bad<>secret'])assert.throws(()=>parseSecret(input));});

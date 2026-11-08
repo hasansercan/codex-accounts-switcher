@@ -1,0 +1,14 @@
+[
+  {
+    "name": "@loongphy/codex-auth-win32-x64",
+    "version": "0.3.1",
+    "url": "https://registry.npmjs.org/@loongphy/codex-auth-win32-x64/-/codex-auth-win32-x64-0.3.1.tgz",
+    "integrity": "sha512-0po4jbc0hEnrOi+mJuWM/NdTgbtoN/1OmMPJDMrIwQsyf92E0YGVPgR69bdi1HwzhRrS0JHmCsPPwpzCul1+wA=="
+  },
+  {
+    "name": "@openai/codex",
+    "version": "0.162.0-win32-x64",
+    "url": "https://registry.npmjs.org/@openai/codex/-/codex-0.162.0-win32-x64.tgz",
+    "integrity": "sha512-W8kqHaqpW0qPz71E0rRT5dq+socGz1BbJyYN7o3SP1TWQt8Zl6ML74R9Hvt/xn1NNLVlDTRfXqNmaMkte6yEMQ=="
+  }
+]

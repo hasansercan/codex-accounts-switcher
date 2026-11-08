@@ -1,0 +1,16 @@
+node_modules/
+runtime/
+.cache/
+.stage/
+dist/
+test-results/
+playwright-report/
+*.auth.json
+auth.json
+usage-cache.json
+preferences.json
+totp-vault.json
+.env*
+.DS_Store
+*.log
+artifacts/

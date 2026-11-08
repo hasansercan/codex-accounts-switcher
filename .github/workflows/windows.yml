@@ -1,0 +1,27 @@
+name: Windows package
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: choco install nsis --yes --no-progress
+      - run: npm ci
+      - run: node node_modules/electron/install.js
+      - run: npm test
+      - run: npm run smoke
+      - run: npm run build:win
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Codex-Accounts-Windows-x64
+          path: |
+            dist/*-Setup.exe
+            dist/*.zip
+            dist/SHA256SUMS.txt

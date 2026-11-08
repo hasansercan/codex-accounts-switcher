@@ -1,0 +1,39 @@
+CODEX ACCOUNTS SWITCHER 1.3.0
+
+Windows 10/11 Intel/AMD x64 için topluluk önizlemesi.
+
+OTOMATİK KURULUM
+Setup.exe dosyasını çift tıkla. Kullanıcı klasörüne kurulur; Masaüstü ve
+Başlat menüsü kısayolları oluşur. Yönetici yetkisi veya Node.js gerekmez.
+
+Hesap ekle ile resmî tarayıcı girişini tamamla, Bu hesaba geç seç.
+Uygulama Türkçedir. Giriş için internet ve Chrome/Edge gerekir; istersen
+bağlantıyı aynı bilgisayardaki kendi tarayıcına kopyala.
+
+GÜNCELLEME
+Önce uygulamayı sistem tepsisinden Çık ile kapat. Yeni Setup.exe’yi
+mevcut kurulumun üzerine çalıştır. Hesaplar ve tercihler korunur.
+
+ZIP ALTERNATİFİ
+ZIP’in tamamını çıkar. Codex Accounts.exe’yi yanındaki dosyalarla kullan.
+
+VERİLER
+Codex hesapları: %USERPROFILE%\.codex\accounts\
+Etkin kimlik: %USERPROFILE%\.codex\auth.json
+Ayarlar/önbellek/şifreli isteğe bağlı 2FA: %APPDATA%\Codex Accounts\
+Kaldırıcı bu kişisel dosyaları silmez. Yedek ve kurtarma anahtarlarını koru.
+
+Kopyalanan kod veya bağlantı, pano değişmediyse 45 sn sonra temizlenir.
+2FA kodunu ekrandan temizlemek kayıtlı anahtarı silmez. Anahtarı silme
+ayrı bir onay gerektirir. DPAPI aynı kullanıcıdaki diğer yazılımlara karşı
+tam koruma sağlamaz. Kurum erişim kısıtları uygulanır.
+
+Paket dijital imzalı değildir; SmartScreen uyarısı çıkabilir. Kaynağını
+ve SHA256SUMS.txt değerini doğrula. Sistem güvenliğini genel kapatma.
+
+Gerçek Windows giriş/SSO, DPAPI ve native Codex hesap geçişi bu sürüm için
+uçtan uca doğrulanmış değildir. Otomatik geçiş başlangıçta kapalıdır.
+
+Kaynak, güncel sürüm, yardım:
+https://github.com/hasansercan/codex-accounts-switcher
+Bağımsız MIT lisanslı proje; OpenAI tarafından yayımlanmış değildir.
