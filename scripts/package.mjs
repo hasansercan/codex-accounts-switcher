@@ -1,4 +1,7 @@
-import { ensureElectronZip, zipDir } from "./electron-runtime.mjs";
+import {
+  ensureElectronZip,
+  zipDir as electronZipDir,
+} from "./electron-runtime.mjs";
 import { verifyPackagedLifecycle } from "./verify-package.mjs";
 import { packager } from "@electron/packager";
 import {
@@ -46,7 +49,7 @@ const [out] = await packager({
     FileDescription: "Codex Accounts",
     ProductName: "Codex Accounts",
   },
-  electronZipDir: zipDir,
+  electronZipDir,
   out: dist,
   overwrite: true,
   asar: true,
