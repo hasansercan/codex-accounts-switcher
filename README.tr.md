@@ -55,3 +55,12 @@ Bu sürüm topluluk önizlemesidir. [Doğrulama kaydı](docs/VERIFICATION.md), o
 Hesaplar `.codex` altında, tercihler ve isteğe bağlı şifreli 2FA kasası `%APPDATA%\Codex Accounts` altında tutulur. [Gizlilik ve veri yolları](docs/PRIVACY.md). Kaldırıcı kişisel hesap/ayar verilerini silmez.
 
 Geliştiren: **[Hasan Sercan](https://github.com/hasansercan)**. MIT lisanslı uygulama; bağımlılıklar kendi lisanslarını korur. Faydalı bulursan depoya yıldız vererek veya bağlantısını paylaşarak destek olabilirsin.
+
+## Geliştirici hakkında
+
+**Hasan Sercan**
+Full Stack Software Engineer · Deca Yazılım Kurucusu
+
+İşletmeler için özel yazılım, web ve mobil uygulamalar, SaaS ürünleri ve sistem entegrasyonları geliştiriyorum.
+
+[Portföy ve hizmetler](https://hasansercan.com.tr/) · [Projenizi konuşalım](https://hasansercan.com.tr/contact)

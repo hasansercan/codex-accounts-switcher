@@ -127,3 +127,12 @@ If anything fails, use the [troubleshooting guide](docs/INSTALLATION.md#troubles
 Bug reports, accessibility improvements, translations and real Windows test reports are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md). If the app is useful, star the repository or share its release page.
 
 Created by **[Hasan Sercan](https://github.com/hasansercan)**. Application source is [MIT licensed](LICENSE); bundled dependencies retain their licenses. Account switching uses [Loongphy/codex-auth](https://github.com/Loongphy/codex-auth); usage/sign-in use the [official Codex app-server interface](https://learn.chatgpt.com/docs/app-server).
+
+## About the developer
+
+**Hasan Sercan**
+Full Stack Software Engineer and founder of Deca Yazılım.
+
+I build custom business software, web and mobile applications, SaaS products, and system integrations.
+
+[Portfolio and services](https://hasansercan.com.tr/) · [Discuss your project](https://hasansercan.com.tr/contact)
