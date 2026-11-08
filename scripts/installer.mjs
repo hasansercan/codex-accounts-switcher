@@ -68,6 +68,7 @@ const args = [
   flag + "INPUTCHARSET",
   "UTF8",
   flag + "DAPP_DIR=" + appDir,
+  flag + "DAPP_GLOB=" + join(appDir, "*"),
   flag + "DOUT_FILE=" + output,
   flag + "DAPP_ICON=" + join(root, "src", "icon.ico"),
   flag + "DUNINSTALL_FILES=" + manifest,

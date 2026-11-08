@@ -68,7 +68,7 @@ Section "Codex Accounts" SEC_MAIN
  SetShellVarContext current
  SetOutPath "$INSTDIR"
  ClearErrors
- File /r "${APP_DIR}/*"
+ File /r "${APP_GLOB}"
  IfErrors failed
  WriteUninstaller "$INSTDIR\Uninstall.exe"
  IfErrors failed
