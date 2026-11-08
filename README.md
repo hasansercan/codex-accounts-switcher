@@ -64,7 +64,11 @@ The publisher is not digitally signed, so Windows may display a SmartScreen noti
 
 **Upgrade:** quit from the tray menu and run the new installer over the existing installation. No account re-entry is needed for an existing Windows installation. Uninstalling preserves account files and app preferences; see [data locations](docs/PRIVACY.md).
 
-**Requirements:** Windows 10/11, Intel/AMD x64; internet for sign-in/live usage; Chrome or Edge for an isolated login window. You can instead copy the login link into your browser on the same computer. This release does not include a macOS, Linux, ARM64 or 32-bit distribution.
+**Requirements:** Windows 10/11, Intel/AMD x64; internet for sign-in/live usage; Chrome or Edge for an isolated login window. You can instead copy the login link into your browser on the same computer. Windows ARM64 and 32-bit distributions are unavailable. For Mac, see the native edition below.
+
+## macOS edition
+
+The native SwiftUI edition runs on **Apple Silicon, macOS 13.5 or later**. Download the macOS arm64 ZIP from Releases, extract it, and move the app into Applications. The preview uses an ad-hoc signature and is not notarized. See [Mac installation and build](macos/README.md).
 
 ## Build from source
 
@@ -94,7 +98,7 @@ For a safe UI preview with synthetic accounts:
 npm run demo
 ```
 
-Demo mode does not start the real account bridge. macOS/Linux are supported only for development preview and cross-packaging in this repository. Actual account operations target Windows.
+Demo mode does not start the real account bridge. The Electron application targets Windows. macOS has a separate native SwiftUI build under `macos/`.
 
 ## How it works
 

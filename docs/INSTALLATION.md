@@ -6,7 +6,7 @@ Download the Setup.exe from [Releases](https://github.com/hasansercan/codex-acco
 
 Türkçe: Setup.exe’yi çift tıkla. Programı açıp **Hesap ekle** seç. Her hesap için resmî giriş yap; sonra **Bu hesaba geç** ile etkinleştir.
 
-Windows 10/11 Intel/AMD x64 is the supported distribution target. The installer bootstrap itself is a standard 32-bit NSIS executable that installs the **64-bit application**; its PE header does not indicate a 32-bit application build. macOS/Linux/ARM64/Windows 7/8 are not distributed by this release.
+Windows 10/11 Intel/AMD x64 is the supported distribution target. The installer bootstrap itself is a standard 32-bit NSIS executable that installs the **64-bit application**; its PE header does not indicate a 32-bit application build. Windows ARM64 and Windows 7/8 packages are unavailable. The separate [native Mac edition](../macos/README.md) targets Apple Silicon.
 
 ## Verify a download
 

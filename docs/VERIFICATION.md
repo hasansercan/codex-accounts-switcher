@@ -23,8 +23,12 @@ GitHub workflows run unit/policy tests and the Electron demo smoke on a Windows 
 
 - Real browser/device-code sign-in and organization SSO.
 - Native Codex account identity changing after auth-file switching and restart.
-- Windows DPAPI save/load/remove behavior with a real user's vault.
+- Windows DPAPI behavior with a real user's vault. Synthetic save/load runs on the Windows CI runner.
 - Tray/autostart behavior and installation/uninstallation on a normal Windows desktop.
 - Graceful close rejection, activity detection and native Codex relaunch on a real machine.
 
 The previous local Windows build was user-reported to open but failed at a helper path inside ASAR. That packaging defect is fixed and has focused regression coverage. No end-to-end live account success is inferred from the automated checks. This release is a community preview.
+
+## Native macOS edition
+
+SwiftUI sources were compiled on Apple Silicon and the resulting app bundle passed strict code-signature verification. The package is ad-hoc signed. Live sign-in and switching with a personal account were not used to validate the release.

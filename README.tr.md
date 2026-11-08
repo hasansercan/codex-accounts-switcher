@@ -29,6 +29,10 @@ Paket dijital yayıncı sertifikasıyla imzalanmamıştır; SmartScreen uyarıs�
 
 **ZIP seçeneği:** ZIP’in tamamını çıkar, içindeki `Codex Accounts.exe` dosyasını aç; yanındaki dosyaları koru. **Güncelleme:** uygulamayı tepsiden Çık ile kapatıp yeni kurulumu üstüne çalıştır. Önce kaldırmak gerekmez. Hesapların ve ayarların korunur.
 
+## Mac sürümü
+
+Apple Silicon (M serisi), macOS 13.5 ve üzeri için yerel SwiftUI paketi var. Releases sayfasından macOS arm64 ZIP dosyasını indirip çıkar ve uygulamayı Uygulamalar klasörüne taşı. Paket ad-hoc imzalıdır ve Apple noter onayı yoktur. [Mac kurulum ve derleme rehberi](macos/README.md).
+
 ## Kaynaktan derleme
 
 Node.js 24+, npm ve NSIS 3 (`makensis`) gerekir:
