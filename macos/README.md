@@ -2,6 +2,8 @@
 
 The macOS edition is a SwiftUI menu bar app for Apple Silicon (M-series), macOS 13.5 or later. It supports account switching, usage details, automatic switching preferences and offline TOTP with optional Keychain storage.
 
+If this Mac has never run Codex, open Codex once to initialize its local account directory before using the switcher.
+
 Download the macOS arm64 ZIP from Releases, extract it, and move Codex Accounts.app into Applications. Quit any previous instance before replacing it. The preview uses an ad-hoc signature and is not notarized. macOS Gatekeeper may block the initial launch. Verify the release checksum and follow the macOS Privacy & Security prompts for this specific application.
 
 ## Build

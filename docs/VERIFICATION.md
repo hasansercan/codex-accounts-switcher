@@ -31,4 +31,4 @@ The previous local Windows build was user-reported to open but failed at a helpe
 
 ## Native macOS edition
 
-SwiftUI sources were compiled on Apple Silicon and the resulting app bundle passed strict code-signature verification. The package is ad-hoc signed. Live sign-in and switching with a personal account were not used to validate the release.
+SwiftUI sources were compiled on Apple Silicon and the resulting app bundle passed strict code-signature verification. The package is ad-hoc signed. The packaged bridge returned an empty account list against an isolated initialized Codex directory. Native TOTP passed all 18 RFC 6238 vectors. Live sign-in and switching with a personal account were not used to validate the release.

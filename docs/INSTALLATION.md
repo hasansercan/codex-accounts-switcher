@@ -46,7 +46,8 @@ The first build downloads pinned dependency archives from the npm registry and E
 | Symptom | Action |
 | --- | --- |
 | PowerShell says `app.asar/src/lifecycle.ps1` is missing | Quit the old app and install the current release. The helper is now a real `resources/lifecycle.ps1` file. |
-| Account bridge unavailable | Reinstall the complete package, including `resources/runtime`, and restart. Check organizational security policy. |
+| Account bridge unavailable on a fresh machine | Open Codex once to initialize its local account directory, then reopen the switcher. |
+| Account bridge unavailable after an upgrade | Reinstall the complete package, including `resources/runtime`, and restart. Check organizational security policy. |
 | Browser did not open | Install Chrome/Edge, or turn automatic opening off and copy the login URL. |
 | No usage / token history | Check connectivity and sign-in. The server may not provide that endpoint for the account/version. Unknown fields remain unknown. |
 | Wrong TOTP code | Check Windows time synchronization and the original setup key, algorithm, digit count and period. A recovery code cannot generate TOTP codes. |
