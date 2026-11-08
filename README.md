@@ -9,7 +9,7 @@
     <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-176478"></a>
     <img alt="Windows 10 and 11 x64" src="https://img.shields.io/badge/Windows-10%20%2F%2011%20x64-176478">
   </p>
-  <p><a href="https://github.com/hasansercan/codex-accounts-switcher/releases/latest"><strong>Download for Windows</strong></a> · <a href="README.tr.md">Türkçe</a> · <a href="docs/INSTALLATION.md">Installation guide</a> · <a href="docs/VERIFICATION.md">What has been tested</a></p>
+  <p><a href="https://github.com/hasansercan/codex-accounts-switcher/releases/latest"><strong>Download for Windows</strong></a> · <a href="https://hasansercan.github.io/codex-accounts-switcher/">Project website</a> · <a href="README.tr.md">Türkçe</a> · <a href="docs/INSTALLATION.md">Installation guide</a> · <a href="docs/VERIFICATION.md">What has been tested</a></p>
 </div>
 
 ![Codex account manager showing account cards and usage limits](docs/screenshots/accounts-light.png)
