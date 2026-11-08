@@ -37,7 +37,7 @@ Quit via the tray menu, then run the new installer over the existing installatio
 
 ## Source build
 
-Node.js 24+, npm, and NSIS 3 are required. `npm ci`, `node node_modules/electron/install.js`, `npm test`, then `npm run build:win`. Use `MAKENSIS` with an absolute compiler path if it is not on PATH. The Windows build detects the default NSIS Program Files location. The native compiler on macOS can cross-build the installer without Wine.
+Node.js 24+, npm, and NSIS 3 are required. `npm ci`, `npm run setup:electron`, `npm test`, then `npm run build:win`. Use `MAKENSIS` with an absolute compiler path if it is not on PATH. The Windows build detects the default NSIS Program Files location. The native compiler on macOS can cross-build the installer without Wine.
 
 The first build downloads pinned dependency archives from the npm registry and Electron from its official release distribution. Runtime npm integrity is checked before extraction. Do not change the pins without testing the account protocol, packaging and license notices.
 

@@ -26,13 +26,18 @@
     "build:installer": "node scripts/installer.mjs",
     "verify:package": "node scripts/verify-package.mjs",
     "smoke": "node scripts/smoke.mjs",
-    "screenshots": "node scripts/smoke.mjs --screenshots"
+    "screenshots": "node scripts/smoke.mjs --screenshots",
+    "format": "prettier --write \"src/**/*.{js,cjs,mjs,css,html}\" \"scripts/*.mjs\" \"tests/*.mjs\"",
+    "format:check": "prettier --check \"src/**/*.{js,cjs,mjs,css,html}\" \"scripts/*.mjs\" \"tests/*.mjs\"",
+    "setup:electron": "node scripts/electron-runtime.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",
+    "@electron-internal/extract-zip": "1.0.8",
     "@electron/packager": "20.3.0",
     "@playwright/test": "1.65.0",
     "electron": "45.2.3",
+    "prettier": "3.6.2",
     "tar": "7.5.22",
     "yazl": "3.3.1"
   },

@@ -4,7 +4,7 @@ Date: 2026-11-08. This file distinguishes implementation checks from real accoun
 
 ## Local macOS development checks
 
-- 15 Node tests pass: fake-account bridge integration, three lifecycle regressions, four automatic-selection/input tests, five TOTP tests and two usage-mapping tests.
+- Local Node suite: 15 pass; one Windows-only test is skipped on macOS: fake-account bridge integration, three lifecycle regressions, four automatic-selection/input tests, five TOTP tests and two usage-mapping tests.
 - TOTP tests include all 18 RFC 6238 time/algorithm vectors for SHA-1/256/512, plus rollover and invalid parameters.
 - Bridge integration runs against synthetic account/auth/app-server executables. It checks account selection, login creation/cancel, independent limit/history failures, metadata changes, removal and absence of fixture secret values in UI output/cache.
 - The packaged main process is loaded into an isolated test context. Its inspect/close calls are intercepted; a real non-Electron child independently opens the physical PowerShell script path. No account files or real Codex processes are used.
@@ -13,6 +13,9 @@ Date: 2026-11-08. This file distinguishes implementation checks from real accoun
 - Build-tool dependency overrides address the glob/minimatch advisories reported at preparation time; `npm audit` reports zero known vulnerabilities after the update. This is not an independent security audit.
 
 ## Windows automation
+
+A Windows-only test executes PowerShell against the real lifecycle script. The Windows demo smoke also saves and decrypts a synthetic TOTP key using DPAPI in a disposable directory. These are synthetic checks; they do not use a real account.
+
 
 GitHub workflows run unit/policy tests and the Electron demo smoke on a Windows runner. The POSIX executable-fixture bridge test is explicitly skipped on Windows. The package workflow builds native Windows artifacts and verifies the external helper path. Workflow results are visible under Actions; only successful runs should be treated as evidence.
 

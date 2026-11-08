@@ -1,3 +1,44 @@
-import test from 'node:test';import assert from 'node:assert/strict';import {limitsFromResponse,historyFromResponse} from '../src/usage.mjs';
-test('unknown remains unknown and reset count does not depend on detail length',()=>{let r=limitsFromResponse({});assert.equal(r.resetCredits,null);assert.equal(r.primary,null);r=limitsFromResponse({rateLimitResetCredits:{availableCount:5,credits:[{id:'one',expiresAt:2000000000}]}});assert.equal(r.resetCredits,5);assert.equal(r.resetDetails.length,1);assert.equal(r.resetDetails[0].expiresAt,2000000000);});
-test('official buckets and history survive independent refreshes',()=>{const prior={history:{summary:{lifetimeTokens:10}}};const r=limitsFromResponse({rateLimits:{primary:{usedPercent:120,windowDurationMins:300},credits:{balance:'0',unlimited:false}}},prior);assert.equal(r.primary.used,100);assert.equal(r.credits,'0');assert.deepEqual(r.history,prior.history);const h=historyFromResponse({summary:{lifetimeTokens:0},dailyUsageBuckets:[{startDate:'2026-11-02',tokens:1},{startDate:'2026-11-01',tokens:0},{startDate:'bad',tokens:4}]});assert.equal(h.summary.lifetimeTokens,0);assert.equal(h.summary.peakDailyTokens,null);assert.equal(h.daily.length,2);assert.equal(h.daily[0].tokens,0);});
+import test from "node:test";
+import assert from "node:assert/strict";
+import { limitsFromResponse, historyFromResponse } from "../src/usage.mjs";
+test("unknown remains unknown and reset count does not depend on detail length", () => {
+  let r = limitsFromResponse({});
+  assert.equal(r.resetCredits, null);
+  assert.equal(r.primary, null);
+  r = limitsFromResponse({
+    rateLimitResetCredits: {
+      availableCount: 5,
+      credits: [{ id: "one", expiresAt: 2000000000 }],
+    },
+  });
+  assert.equal(r.resetCredits, 5);
+  assert.equal(r.resetDetails.length, 1);
+  assert.equal(r.resetDetails[0].expiresAt, 2000000000);
+});
+test("official buckets and history survive independent refreshes", () => {
+  const prior = { history: { summary: { lifetimeTokens: 10 } } };
+  const r = limitsFromResponse(
+    {
+      rateLimits: {
+        primary: { usedPercent: 120, windowDurationMins: 300 },
+        credits: { balance: "0", unlimited: false },
+      },
+    },
+    prior,
+  );
+  assert.equal(r.primary.used, 100);
+  assert.equal(r.credits, "0");
+  assert.deepEqual(r.history, prior.history);
+  const h = historyFromResponse({
+    summary: { lifetimeTokens: 0 },
+    dailyUsageBuckets: [
+      { startDate: "2026-11-02", tokens: 1 },
+      { startDate: "2026-11-01", tokens: 0 },
+      { startDate: "bad", tokens: 4 },
+    ],
+  });
+  assert.equal(h.summary.lifetimeTokens, 0);
+  assert.equal(h.summary.peakDailyTokens, null);
+  assert.equal(h.daily.length, 2);
+  assert.equal(h.daily[0].tokens, 0);
+});

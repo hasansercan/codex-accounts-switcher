@@ -37,7 +37,7 @@ Node.js 24+, npm ve NSIS 3 (`makensis`) gerekir:
 git clone https://github.com/hasansercan/codex-accounts-switcher.git
 cd codex-accounts-switcher
 npm ci
-node node_modules/electron/install.js
+npm run setup:electron
 npm test
 npm run build:win
 ```

@@ -10,6 +10,8 @@ jobs:
     strategy:
       matrix:
         os: [macos-latest, windows-latest]
+    env:
+      GH_TOKEN: ${{ github.token }}
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
@@ -18,7 +20,8 @@ jobs:
           node-version: '24'
           cache: npm
       - run: npm ci
-      - run: node node_modules/electron/install.js
+      - run: npm run setup:electron
+      - run: npm run format:check
       - run: npm test
       - run: npm audit
       - run: npm run smoke
